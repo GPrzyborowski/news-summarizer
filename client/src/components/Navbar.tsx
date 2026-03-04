@@ -14,7 +14,7 @@ function Navbar() {
 						<Link to="/" className="hover:text-white text-3xl transition-colors">
 							Home
 						</Link>
-						<Link to="#" className="hover:text-white text-3xl transition-colors">
+						<Link to="/login" className="hover:text-white text-3xl transition-colors">
 							Login
 						</Link>
 						<Link to="/register" className="hover:text-white text-3xl transition-colors">
@@ -39,7 +39,7 @@ function Navbar() {
 						Home
 					</Link>
 					<Link
-						to="#"
+						to="/login"
 						onClick={() => setIsOpen(false)}
 						className="text-3xl font-light tracking-widest my-18 hover:text-white">
 						Login
