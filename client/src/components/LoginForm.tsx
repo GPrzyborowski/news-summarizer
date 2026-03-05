@@ -26,7 +26,7 @@ function LoginForm() {
 			<div className="flex justify-center">
 				<button
 					type="submit"
-					className="border border-taupe-200 mt-10 px-8 py-4 cursor-pointer text-2xl hover:text-[#242424] hover:bg-taupe-200 duration-100 ease-in">
+					className="border border-taupe-200 mt-6 px-8 py-4 cursor-pointer text-2xl hover:text-[#242424] hover:bg-taupe-200 duration-100 ease-in">
 					Login
 				</button>
 			</div>
