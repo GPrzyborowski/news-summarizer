@@ -16,7 +16,7 @@ function CategoryCheckbox({ idFor, labelContent, checked, onChange }: CategoryCh
 				className="w-5 h-5 accent-taupe-200 cursor-pointer focus:ring-0"
 			/>
 
-			<label htmlFor={idFor} className="text-xl text-taupe-200 select-none cursor-pointer">
+			<label htmlFor={idFor} className="text-2xl text-taupe-200 select-none cursor-pointer">
 				{labelContent}
 			</label>
 		</div>
