@@ -20,18 +20,20 @@ public class UserService {
     }
 
     public AppUser register(RegisterRequest req) {
-        String email = req.email().trim().toLowerCase();
-
-        if (email.isBlank() || req.password() == null || req.password().isBlank()) {
-            throw new IllegalArgumentException("Email and password are required.");
+        String username = req.username() == null ? "" : req.username().trim();
+        String email = req.email() == null ? "" : req.email().trim().toLowerCase();
+        String password = req.password();
+        
+        if (username.isBlank() || email.isBlank() || password == null || password.isBlank()) {
+            throw new IllegalArgumentException("Username, email and password are required.");
         }
 
         if (userRepository.findByEmail(email).isPresent()) {
             throw new IllegalStateException("User with that email already exists.");
         }
 
-        String hash = passwordEncoder.encode(req.password());
-        AppUser user = new AppUser(email, hash);
+        String hash = passwordEncoder.encode(password);
+        AppUser user = new AppUser(username, email, hash);
         return userRepository.save(user);
     }
 }
