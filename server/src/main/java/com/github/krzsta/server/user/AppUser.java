@@ -25,8 +25,10 @@ public class AppUser {
     @Column(name = "password_hash", nullable = false)
     private String passwordHash;
 
-    @Column(name = "createad_at", nullable = false)
+    @Column(name = "created_at", nullable = false)
     private OffsetDateTime createdAt;
+
+    public AppUser() {}
 
     public AppUser(String username, String email, String passwordHash) {
         this.username = username;
@@ -64,5 +66,9 @@ public class AppUser {
 
     public void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
+    }
+
+    public void setCreatedAt(OffsetDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 }
